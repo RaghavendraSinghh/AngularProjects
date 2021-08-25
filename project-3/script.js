@@ -1,18 +1,15 @@
-function calculate()
-{
-    var n1=parseInt(document.getElementById("btn1").value);
-    var n2=parseInt(document.getElementById("btn2").value);
-    var n3=parseInt(document.getElementById("btn3").value);
-  var n4=n1*n2;
-  var result=n1+(n4*n3)/100;
-  document,getElementById("btn4").value=result;
+function PayableAmount() {
+    
+    var ele = document.getElementsByClassName("ele");
+
+    var price = parseInt(ele[0].value)
+    var quantity = parseInt(ele[1].value)
+    var tax = parseInt(ele[2].value)
+    
+    var amount = price * quantity;
+    var totalTax = (amount * tax) / 100;
+
+    ele[3].value = amount + totalTax;
+    
 
 }
-
-
-
-
-document.getElementById("btn1").addEventListener("click",function calculate(){
-    document.getElementById("p1").style.price="1300000";
-
-})
